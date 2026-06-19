@@ -36,13 +36,16 @@ export function OrbitalGallery() {
 
   return (
     <div
-      className="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-muted via-background to-muted rounded-2xl border border-border"
+      className="relative w-full h-full flex items-center justify-center bg-white border border-border rounded-3xl"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Fade gradient overlay */}
-      <div className="absolute inset-0 pointer-events-none rounded-2xl">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-20 rounded-2xl" />
+      {/* Soft gradient background - garden atmosphere */}
+      <div className="absolute inset-0 pointer-events-none rounded-3xl bg-gradient-to-br from-blue-50 via-white to-green-50 opacity-40" />
+      
+      {/* Fade gradient overlay for depth */}
+      <div className="absolute inset-0 pointer-events-none rounded-3xl">
+        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/60 rounded-3xl" />
       </div>
 
       {/* Rotating orbit container - rotates all items together */}
@@ -68,12 +71,12 @@ export function OrbitalGallery() {
             >
               {/* Orbit item card - counter-rotates to stay upright */}
               <div
-                className={`w-full h-full ${item.shape} bg-gradient-to-br from-primary/75 to-secondary/55 border border-border/40 shadow-lg flex items-center justify-center cursor-pointer hover:from-secondary/85 hover:to-accent/65 transition-all duration-300`}
+                className={`w-full h-full ${item.shape} bg-gradient-to-br from-sky-300/70 to-green-400/60 border border-white/50 shadow-md flex items-center justify-center cursor-pointer hover:from-sky-400/80 hover:to-teal-400/70 transition-all duration-300`}
               >
                 {/* Content */}
                 <div className="text-center pointer-events-none">
                   <div className="text-lg mb-0.5">{item.emoji}</div>
-                  <p className="text-xs font-medium text-foreground/80 leading-tight">{item.title}</p>
+                  <p className="text-xs font-500 text-foreground leading-tight">{item.title}</p>
                 </div>
               </div>
             </div>
@@ -83,10 +86,10 @@ export function OrbitalGallery() {
 
       {/* Center hub */}
       <div className="absolute z-30 flex flex-col items-center justify-center gap-2">
-        <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-secondary to-accent flex items-center justify-center border border-border/50 shadow-lg">
+        <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-sky-400 to-green-400 flex items-center justify-center border border-white/60 shadow-lg">
           <span className="text-xl">📱</span>
         </div>
-        <p className="text-xs font-medium text-muted-foreground text-center leading-tight whitespace-nowrap">Scan Plant</p>
+        <p className="text-xs font-500 text-foreground text-center leading-tight whitespace-nowrap">Scan Plant</p>
       </div>
 
       {/* CSS animation */}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
@@ -6,7 +6,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-heading: 'Instrument Serif', serif;
+  --font-heading: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-sans: 'Inter', sans-serif;
   --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
   --color-sidebar-ring: var(--sidebar-ring);
@@ -50,48 +50,49 @@
 }
 
 :root {
-  color-scheme: dark;
-  --background: #06120C;
-  --foreground: #F6F1E3;
-  --card: #0F1E19;
-  --card-foreground: #F6F1E3;
-  --popover: #0F1E19;
-  --popover-foreground: #F6F1E3;
-  --primary: #2D5A4F;
-  --primary-foreground: #F6F1E3;
-  --secondary: #4A8B78;
-  --secondary-foreground: #F6F1E3;
-  --muted: #1A3530;
-  --muted-foreground: #A8A89A;
-  --accent: #6BA899;
-  --accent-foreground: #06120C;
+  color-scheme: light;
+  /* Bright garden atmosphere: sky blue, soft green, mint, warm cream, dark green text */
+  --background: #FFFFFF;
+  --foreground: #1B4D2E;
+  --card: #F8FAFB;
+  --card-foreground: #1B4D2E;
+  --popover: #F8FAFB;
+  --popover-foreground: #1B4D2E;
+  --primary: #1B4D2E;
+  --primary-foreground: #FFFFFF;
+  --secondary: #87CEEB;
+  --secondary-foreground: #1B4D2E;
+  --muted: #E8F5E9;
+  --muted-foreground: #5B8C5F;
+  --accent: #7FD8BE;
+  --accent-foreground: #1B4D2E;
   --destructive: #E63946;
-  --border: #1A3530;
-  --input: #0F1E19;
-  --ring: #4A8B78;
-  --chart-1: #2D5A4F;
-  --chart-2: #4A8B78;
-  --chart-3: #6BA899;
-  --chart-4: #8CB9AA;
-  --chart-5: #A8C9BC;
+  --border: #E0E7E4;
+  --input: #FFFFFF;
+  --ring: #7FD8BE;
+  --chart-1: #1B4D2E;
+  --chart-2: #87CEEB;
+  --chart-3: #7FD8BE;
+  --chart-4: #C8E6C9;
+  --chart-5: #E8F5E9;
   --radius: 0.625rem;
-  --sidebar: #06120C;
-  --sidebar-foreground: #F6F1E3;
-  --sidebar-primary: #2D5A4F;
-  --sidebar-primary-foreground: #F6F1E3;
-  --sidebar-accent: #4A8B78;
-  --sidebar-accent-foreground: #F6F1E3;
-  --sidebar-border: #1A3530;
-  --sidebar-ring: #4A8B78;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1B4D2E;
+  --sidebar-primary: #1B4D2E;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #7FD8BE;
+  --sidebar-accent-foreground: #1B4D2E;
+  --sidebar-border: #E0E7E4;
+  --sidebar-ring: #7FD8BE;
 }
 
 .dark {
-  /* PlantCare brand colors already set in :root */
+  /* Light mode is default, no dark override needed */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    /* PlantCare brand colors already set in :root */
+@media (prefers-color-scheme: light) {
+  :root:not(.dark) {
+    /* Light mode colors already set in :root */
   }
 }
 
@@ -138,10 +139,13 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
   html {
-    @apply font-sans bg-background;
+    @apply bg-background;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
   }
 }
 

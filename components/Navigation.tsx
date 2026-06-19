@@ -8,28 +8,44 @@ export function Navigation() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm"
+      className="sticky top-0 z-50 border-b border-border/60 bg-white/80 backdrop-blur-md"
     >
-      <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-full bg-gradient-to-br from-accent to-secondary" />
-            <span className="font-heading text-xl font-semibold text-foreground">PlantCare</span>
+      <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-12">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo - minimal, elegant */}
+          <div className="flex items-center gap-3">
+            <div className="w-7 h-7 rounded-full bg-gradient-to-br from-sky-400 to-green-400" />
+            <span className="font-heading text-lg font-500 text-foreground">PlantCare</span>
           </div>
-          <div className="hidden gap-8 md:flex">
-            <a href="#features" className="text-sm text-muted-foreground transition hover:text-foreground">
-              Features
+
+          {/* Center Navigation - hidden on mobile, inspired by Fourmula 12px weight 400 */}
+          <div className="hidden gap-12 md:flex">
+            <a href="#features" className="text-xs font-400 text-foreground/60 transition hover:text-foreground">
+              AI Diagnosis
             </a>
-            <a href="#pricing" className="text-sm text-muted-foreground transition hover:text-foreground">
+            <a href="#calendar" className="text-xs font-400 text-foreground/60 transition hover:text-foreground">
+              Care Calendar
+            </a>
+            <a href="#pricing" className="text-xs font-400 text-foreground/60 transition hover:text-foreground">
               Pricing
             </a>
-            <a href="#faq" className="text-sm text-muted-foreground transition hover:text-foreground">
+            <a href="#faq" className="text-xs font-400 text-foreground/60 transition hover:text-foreground">
               FAQ
             </a>
           </div>
-          <button className="rounded-lg bg-secondary px-6 py-2 text-sm font-semibold text-foreground transition hover:bg-accent hover:text-accent-foreground">
-            Get Started
-          </button>
+
+          {/* Right CTAs */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            {/* Secondary button - light gray background */}
+            <button className="hidden sm:inline-flex text-xs font-500 text-foreground bg-muted rounded-full px-5 py-2 transition hover:bg-border">
+              Sign in
+            </button>
+
+            {/* Primary button - deep black, pill-shaped */}
+            <button className="inline-flex text-xs font-500 text-white bg-primary rounded-full px-5 py-2 transition hover:opacity-90 active:opacity-80">
+              Get Started
+            </button>
+          </div>
         </div>
       </div>
     </motion.nav>

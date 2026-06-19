@@ -4,42 +4,45 @@ import { motion } from 'framer-motion';
 
 export function MainStatement() {
   return (
-    <section className="bg-background px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-4xl">
+    <section className="bg-white px-6 sm:px-8 lg:px-12 py-24 sm:py-32 lg:py-40">
+      <div className="mx-auto max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8 }}
-          className="text-center"
+          className="space-y-8"
         >
-          <h2 className="font-heading text-5xl font-bold tracking-tight text-foreground sm:text-6xl text-balance">
-            Transform your home garden into a{' '}
-            <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">thriving ecosystem</span>
+          {/* Main headline - Fourmula H2 style: 100px, 400 weight */}
+          <h2 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-400 leading-tight tracking-tight text-foreground">
+            On-plant insights. Made by AI.
           </h2>
-          <p className="mt-8 text-xl text-muted-foreground text-balance">
-            With PlantCare&apos;s advanced AI and real-time monitoring, you&apos;ll never kill a plant again. Every plant gets the exact care
-            it needs, exactly when it needs it.
+
+          {/* Supporting body - calm, spacious layout */}
+          <p className="text-base sm:text-lg text-foreground/70 leading-relaxed max-w-2xl">
+            Capture a photo of your plant. Our AI analyzes it in seconds. Get a complete diagnosis with treatment recommendations and a personalized care calendar that adapts to your specific conditions.
           </p>
+
+          {/* Stats grid - minimal, elegant layout */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-12 rounded-xl border border-border bg-muted p-6 sm:p-8"
+            className="pt-8"
           >
-            <div className="grid gap-4 sm:grid-cols-3">
-              <div>
-                <div className="text-3xl font-bold text-secondary">98%</div>
-                <p className="text-sm text-muted-foreground">Plant Survival Rate</p>
+            <div className="grid gap-8 sm:gap-12 sm:grid-cols-3">
+              <div className="space-y-2">
+                <div className="text-4xl sm:text-5xl font-heading font-500 text-primary">98%</div>
+                <p className="text-sm font-500 text-foreground/60">Plant Survival Rate</p>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-secondary">50K+</div>
-                <p className="text-sm text-muted-foreground">Happy Gardeners</p>
+              <div className="space-y-2">
+                <div className="text-4xl sm:text-5xl font-heading font-500 text-primary">50K+</div>
+                <p className="text-sm font-500 text-foreground/60">Gardeners Trusted</p>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-secondary">24/7</div>
-                <p className="text-sm text-muted-foreground">Expert Support</p>
+              <div className="space-y-2">
+                <div className="text-4xl sm:text-5xl font-heading font-500 text-primary">24/7</div>
+                <p className="text-sm font-500 text-foreground/60">AI Monitoring</p>
               </div>
             </div>
           </motion.div>

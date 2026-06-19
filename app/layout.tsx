@@ -10,8 +10,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'PlantCare Hub - AI Plant Diagnosis & Care',
+  description: 'AI-powered plant care app that diagnoses diseases, creates custom care plans, and helps your plants thrive.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'dark',
+  colorScheme: 'light',
   themeColor: [
-    { media: '(prefers-color-scheme: dark)', color: '#06120C' },
+    { media: '(prefers-color-scheme: light)', color: '#FFFFFF' },
   ],
 }
 
