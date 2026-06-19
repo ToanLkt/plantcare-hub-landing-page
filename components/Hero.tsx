@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { OrbitalGallery } from './OrbitalGallery';
 
 export function Hero() {
   return (
@@ -41,14 +42,9 @@ export function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative aspect-square overflow-hidden rounded-2xl border border-border bg-muted"
+            className="relative aspect-square"
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <div className="mx-auto mb-4 h-24 w-24 rounded-full bg-gradient-to-br from-accent to-secondary opacity-50" />
-                <p className="text-sm text-muted-foreground">Plant monitoring interface</p>
-              </div>
-            </div>
+            <OrbitalGallery />
           </motion.div>
         </div>
       </div>
