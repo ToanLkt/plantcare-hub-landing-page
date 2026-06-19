@@ -124,6 +124,15 @@
   }
 }
 
+@keyframes vertical-marquee {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -145,5 +154,16 @@
   }
   .animate-pulse-subtle {
     animation: pulse-subtle 2s ease-in-out infinite;
+  }
+  .animate-vertical-marquee {
+    animation: vertical-marquee 20s linear infinite;
+  }
+  .pause-on-hover:hover {
+    animation-play-state: paused;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-vertical-marquee {
+      animation: none;
+    }
   }
 }
