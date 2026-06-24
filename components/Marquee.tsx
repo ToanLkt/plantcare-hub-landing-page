@@ -1,7 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
 const features = [
   'Chẩn đoán bệnh cây bằng AI',
   'Lịch chăm sóc tự động',
@@ -21,18 +19,14 @@ export function Marquee() {
   return (
     <section className="border-y border-emerald-900/10 bg-[#edf7ed] py-6">
       <div className="overflow-hidden">
-        <motion.div
-          animate={{ x: ['0%', '-50%'] }}
-          transition={{ duration: 36, repeat: Infinity, ease: 'linear' }}
-          className="flex w-max gap-8 whitespace-nowrap"
-        >
-          {[...features, ...features, ...features, ...features].map((feature, idx) => (
+        <div className="flex w-max gap-8 whitespace-nowrap animate-marquee motion-reduce:animate-none max-md:animate-none">
+          {[...features, ...features].map((feature, idx) => (
             <div key={idx} className="flex items-center gap-8">
               <span className="text-sm font-semibold text-foreground sm:text-base">{feature}</span>
               <div className="h-1.5 w-1.5 rounded-full bg-emerald-900/20" />
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -32,7 +32,7 @@ export function PlantTips() {
 
   return (
     <section id="tips" className="w-full overflow-hidden bg-background px-6 py-24 md:px-10 md:py-28 lg:px-14 xl:px-16">
-      <div className="mx-auto w-full max-w-[1500px]">
+      <div className="mx-auto w-full max-w-screen-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export function PlantTips() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35 }}
-            className="rounded-[34px] border border-emerald-900/10 bg-gradient-to-br from-[#f8fbf7] to-white p-8 shadow-[0_24px_90px_rgba(20,83,45,0.09)] sm:p-10"
+            className="rounded-[34px] border border-emerald-900/10 bg-linear-to-br from-[#f8fbf7] to-white p-8 shadow-[0_24px_90px_rgba(20,83,45,0.09)] sm:p-10"
           >
             <div className="mb-8 flex items-start justify-between gap-6">
               <div>

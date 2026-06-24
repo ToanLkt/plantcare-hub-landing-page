@@ -1,11 +1,11 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 
 export function MainStatement() {
   return (
     <section id="about" className="w-full overflow-hidden bg-white px-6 py-24 md:px-10 sm:py-32 lg:px-14 lg:py-36 xl:px-16">
-      <div className="mx-auto w-full max-w-[1500px]">
+      <div className="mx-auto w-full max-w-screen-2xl">
         <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-end lg:gap-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

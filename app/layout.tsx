@@ -1,4 +1,4 @@
-import { Analytics } from '@vercel/analytics/next'
+﻿import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
@@ -16,10 +16,13 @@ const beVietnamPro = localFont({
   ],
 })
 
+const shouldEnableAnalytics = process.env.VERCEL === '1'
+
 export const metadata: Metadata = {
   title: 'PlantCare Hub - Chăm cây thông minh bằng AI',
   description: 'Ứng dụng chăm cây thông minh giúp chẩn đoán bệnh cây bằng AI, nhắc lịch chăm sóc và quản lý vườn nhà lẫn vườn ươm.',
   generator: 'v0.app',
+  manifest: '/manifest.json',
   icons: {
     icon: [
       {
@@ -55,7 +58,7 @@ export default function RootLayout({
     <html lang="vi" className={`${beVietnamPro.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {shouldEnableAnalytics && <Analytics />}
       </body>
     </html>
   )

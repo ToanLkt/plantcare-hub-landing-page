@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 
@@ -57,18 +57,7 @@ function VerticalMarqueeTrack() {
 
   return (
     <div className="relative overflow-hidden h-full">
-      {/* Main animated track */}
-      <motion.div
-        animate={{
-          y: ['0%', '-50%'],
-        }}
-        transition={{
-          duration: 28,
-          ease: 'linear',
-          repeat: Infinity,
-        }}
-        className="flex flex-col gap-0 pause-on-hover"
-      >
+      <div className="flex flex-col gap-0 animate-vertical-marquee motion-reduce:animate-none">
         {duplicatedSteps.map((step, idx) => (
           <div
             key={idx}
@@ -90,11 +79,11 @@ function VerticalMarqueeTrack() {
             </div>
           </div>
         ))}
-      </motion.div>
+      </div>
 
       {/* Gradient overlays for fade effect */}
-      <div className="absolute top-0 left-0 right-0 h-12 lg:h-16 bg-gradient-to-b from-background to-transparent pointer-events-none z-10" />
-      <div className="absolute bottom-0 left-0 right-0 h-12 lg:h-16 bg-gradient-to-t from-background to-transparent pointer-events-none z-10" />
+      <div className="absolute top-0 left-0 right-0 h-12 lg:h-16 bg-linear-to-b from-background to-transparent pointer-events-none z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-12 lg:h-16 bg-linear-to-t from-background to-transparent pointer-events-none z-10" />
     </div>
   );
 }
@@ -102,7 +91,7 @@ function VerticalMarqueeTrack() {
 export function HowItWorks() {
   return (
     <section id="features" className="w-full overflow-hidden bg-background px-6 py-20 md:px-10 lg:px-14 lg:py-28 xl:px-16">
-      <div className="mx-auto w-full max-w-[1500px]">
+      <div className="mx-auto w-full max-w-screen-2xl">
         <div className="hidden lg:grid lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 xl:gap-20 lg:min-h-[740px] items-start">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -140,7 +129,7 @@ export function HowItWorks() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, margin: '-100px' }}
-            className="h-[740px] rounded-[34px] overflow-hidden bg-gradient-to-b from-[#f8fbf7] to-white border border-emerald-900/10 shadow-[0_24px_90px_rgba(20,83,45,0.08)]"
+            className="h-[740px] rounded-[34px] overflow-hidden bg-linear-to-b from-[#f8fbf7] to-white border border-emerald-900/10 shadow-[0_24px_90px_rgba(20,83,45,0.08)]"
           >
             <VerticalMarqueeTrack />
           </motion.div>

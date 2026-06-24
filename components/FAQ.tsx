@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -35,7 +35,7 @@ export function FAQ() {
 
   return (
     <section id="faq" className="w-full overflow-hidden bg-background px-6 py-20 md:px-10 md:py-28 lg:px-14 xl:px-16">
-      <div className="mx-auto w-full max-w-[1500px]">
+      <div className="mx-auto w-full max-w-screen-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

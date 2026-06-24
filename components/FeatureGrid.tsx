@@ -29,7 +29,7 @@ const features = [
 export function FeatureGrid() {
   return (
     <section id="features" className="w-full overflow-hidden bg-white px-6 py-24 md:px-10 sm:py-32 lg:px-14 lg:py-40 xl:px-16">
-      <div className="mx-auto w-full max-w-[1500px]">
+      <div className="mx-auto w-full max-w-screen-2xl">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,11 +56,11 @@ export function FeatureGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="group relative bg-gradient-to-br from-white to-slate-50 rounded-2xl border border-border p-8 lg:p-10 hover:border-accent/50 transition-all duration-300 hover:shadow-md"
+              className="group relative rounded-2xl border border-border bg-linear-to-br from-white to-slate-50 p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-md lg:p-10"
             >
               {/* Icon and number */}
               <div className="flex items-start justify-between mb-6">
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-2xl shadow-sm`}>
+                <div className={`flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-br ${feature.color} text-2xl shadow-sm`}>
                   {feature.icon}
                 </div>
                 <span className="text-4xl font-heading font-400 text-foreground/10">{feature.number}</span>
@@ -77,7 +77,7 @@ export function FeatureGrid() {
               </div>
 
               {/* Subtle bottom accent */}
-              <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${feature.color} rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+              <div className={`absolute bottom-0 left-0 right-0 h-1 rounded-b-2xl bg-linear-to-r ${feature.color} opacity-0 transition-opacity duration-300 group-hover:opacity-100`} />
             </motion.div>
           ))}
         </div>

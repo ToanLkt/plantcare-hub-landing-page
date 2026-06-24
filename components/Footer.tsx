@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 
@@ -18,7 +18,7 @@ const legalNotes = [
 export function Footer() {
   return (
     <footer id="support" className="border-t border-emerald-900/10 bg-[#f8fbf7]">
-      <div className="mx-auto w-full max-w-[1500px] px-6 py-16 md:px-10 lg:px-14 xl:px-16">
+      <div className="mx-auto w-full max-w-screen-2xl px-6 py-16 md:px-10 lg:px-14 xl:px-16">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr_1.2fr_0.8fr] lg:gap-14">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -26,7 +26,7 @@ export function Footer() {
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-2 mb-4">
-              <div className="h-8 w-8 rounded-full bg-gradient-to-br from-accent to-secondary" />
+              <div className="h-8 w-8 rounded-full bg-linear-to-br from-accent to-secondary" />
               <span className="font-heading text-xl font-bold text-foreground">PlantCare Hub</span>
             </div>
             <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">

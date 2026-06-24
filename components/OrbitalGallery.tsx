@@ -1,6 +1,5 @@
-'use client';
+﻿'use client';
 
-import { useState } from 'react';
 
 interface OrbitItem {
   id: number;
@@ -11,7 +10,6 @@ interface OrbitItem {
 }
 
 export function OrbitalGallery() {
-  const [isHovered, setIsHovered] = useState(false);
 
   const orbitItems: OrbitItem[] = [
     { id: 1, angle: 0, emoji: '🍃', title: 'Leaf Health', shape: 'rounded-[45%_55%_50%_50%]' },
@@ -37,22 +35,20 @@ export function OrbitalGallery() {
   return (
     <div
       className="relative w-full h-full flex items-center justify-center bg-white border border-border rounded-3xl"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       {/* Soft gradient background - garden atmosphere */}
-      <div className="absolute inset-0 pointer-events-none rounded-3xl bg-gradient-to-br from-blue-50 via-white to-green-50 opacity-40" />
+      <div className="absolute inset-0 pointer-events-none rounded-3xl bg-linear-to-br from-blue-50 via-white to-green-50 opacity-40" />
       
       {/* Fade gradient overlay for depth */}
       <div className="absolute inset-0 pointer-events-none rounded-3xl">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/60 rounded-3xl" />
+        <div className="absolute inset-0 bg-linear-to-b from-white/60 via-transparent to-white/60 rounded-3xl" />
       </div>
 
       {/* Rotating orbit container - rotates all items together */}
       <div
         className="absolute inset-0 flex items-center justify-center"
         style={{
-          animation: isHovered ? 'none' : 'orbital-rotate 24s linear infinite',
+          animation: 'orbital-rotate 24s linear infinite',
         }}
       >
         {/* Orbit items positioned around the circle */}
@@ -71,7 +67,7 @@ export function OrbitalGallery() {
             >
               {/* Orbit item card - counter-rotates to stay upright */}
               <div
-                className={`w-full h-full ${item.shape} bg-gradient-to-br from-sky-300/70 to-green-400/60 border border-white/50 shadow-md flex items-center justify-center cursor-pointer hover:from-sky-400/80 hover:to-teal-400/70 transition-all duration-300`}
+                className={`w-full h-full ${item.shape} bg-linear-to-br from-sky-300/70 to-green-400/60 border border-white/50 shadow-md flex items-center justify-center cursor-pointer hover:from-sky-400/80 hover:to-teal-400/70 transition-all duration-300`}
               >
                 {/* Content */}
                 <div className="text-center pointer-events-none">
@@ -86,7 +82,7 @@ export function OrbitalGallery() {
 
       {/* Center hub */}
       <div className="absolute z-30 flex flex-col items-center justify-center gap-2">
-        <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-sky-400 to-green-400 flex items-center justify-center border border-white/60 shadow-lg">
+        <div className="w-14 h-14 rounded-lg bg-linear-to-br from-sky-400 to-green-400 flex items-center justify-center border border-white/60 shadow-lg">
           <span className="text-xl">📱</span>
         </div>
         <p className="text-xs font-500 text-foreground text-center leading-tight whitespace-nowrap">Scan Plant</p>

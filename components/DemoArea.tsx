@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 
@@ -18,13 +18,13 @@ const careSteps = [
 export function DemoArea() {
   return (
     <section id="problems" className="w-full overflow-hidden bg-background px-6 py-24 md:px-10 md:py-28 lg:px-14 xl:px-16">
-      <div className="mx-auto w-full max-w-[1500px]">
+      <div className="mx-auto w-full max-w-screen-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid gap-10 rounded-[36px] border border-emerald-900/10 bg-gradient-to-br from-[#f8fbf7] to-white p-8 shadow-[0_24px_90px_rgba(20,83,45,0.08)] sm:p-12 lg:grid-cols-[0.9fr_1.1fr] lg:p-16 xl:p-20"
+          className="grid gap-10 rounded-[36px] border border-emerald-900/10 bg-linear-to-br from-[#f8fbf7] to-white p-8 shadow-[0_24px_90px_rgba(20,83,45,0.08)] sm:p-12 lg:grid-cols-[0.9fr_1.1fr] lg:p-16 xl:p-20"
         >
           <div className="space-y-8">
             <div className="space-y-5">
