@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 520">
+  <rect width="280" height="520" fill="#f8fbf7"/>
+  <rect width="280" height="60" fill="#2d6a30"/>
+  <text x="20" y="35" font-family="Arial" font-size="14" fill="white" font-weight="bold">AI Diagnosis</text>
+  <text x="20" y="50" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.7)">Accuracy 96%</text>
+  <rect x="20" y="80" width="240" height="180" rx="12" fill="#1a1a1a"/>
+  <circle cx="140" cy="170" r="50" fill="none" stroke="#4ade80" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="140" cy="170" r="30" fill="none" stroke="#4ade80" stroke-width="1"/>
+  <text x="140" y="175" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Take Photo</text>
+  <rect x="40" y="130" width="200" height="2" fill="#4ade80" opacity="0.5">
+    <animate attributeName="y" values="130;240;130" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="20" y="280" width="240" height="100" rx="12" fill="white"/>
+  <rect x="30" y="290" width="80" height="80" rx="8" fill="#dcfce7"/>
+  <ellipse cx="70" cy="330" rx="25" ry="35" fill="#4ade80"/>
+  <circle cx="75" cy="320" r="5" fill="#ef4444" opacity="0.8"/>
+  <circle cx="65" cy="340" r="3" fill="#ef4444" opacity="0.6"/>
+  <text x="120" y="310" font-family="Arial" font-size="14" fill="#1a1a1a" font-weight="bold">Leaf Spot Disease</text>
+  <text x="120" y="330" font-family="Arial" font-size="12" fill="#4ade80">Confidence: 96%</text>
+  <rect x="120" y="345" width="130" height="4" rx="2" fill="#e5e7eb"/>
+  <rect x="120" y="345" width="125" height="4" rx="2" fill="#4ade80"/>
+  <rect x="20" y="395" width="240" height="110" rx="12" fill="white"/>
+  <text x="30" y="420" font-family="Arial" font-size="12" fill="#1a1a1a" font-weight="bold">Treatment Guide</text>
+  <circle cx="40" cy="450" r="12" fill="#dcfce7"/>
+  <text x="40" y="454" font-family="Arial" font-size="10" fill="#4ade80" text-anchor="middle">1</text>
+  <text x="60" y="453" font-family="Arial" font-size="10" fill="#374151">Remove infected leaves</text>
+  <circle cx="40" cy="475" r="12" fill="#dcfce7"/>
+  <text x="40" y="479" font-family="Arial" font-size="10" fill="#4ade80" text-anchor="middle">2</text>
+  <text x="60" y="478" font-family="Arial" font-size="10" fill="#374151">Apply fungicide</text>
+  <circle cx="40" cy="500" r="12" fill="#dcfce7"/>
+  <text x="40" y="504" font-family="Arial" font-size="10" fill="#4ade80" text-anchor="middle">3</text>
+  <text x="60" y="503" font-family="Arial" font-size="10" fill="#374151">Reduce watering</text>
+</svg>

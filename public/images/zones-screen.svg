@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 520">
+  <rect width="280" height="520" fill="#f8fbf7"/>
+  <rect width="280" height="60" fill="#7c3aed"/>
+  <text x="20" y="35" font-family="Arial" font-size="14" fill="white" font-weight="bold">Zone Management</text>
+  <text x="20" y="50" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.7)">4 zones - 40 plants</text>
+  <rect x="20" y="80" width="240" height="200" rx="12" fill="white"/>
+  <rect x="30" y="90" width="100" height="85" rx="8" fill="#dcfce7"/>
+  <text x="80" y="115" font-family="Arial" font-size="10" fill="#4ade80" text-anchor="middle">Zone A</text>
+  <text x="80" y="135" font-family="Arial" font-size="14" fill="#1a1a1a" text-anchor="middle">12 plants</text>
+  <text x="80" y="155" font-family="Arial" font-size="8" fill="#6b7280" text-anchor="middle">Good</text>
+  <rect x="140" y="90" width="110" height="85" rx="8" fill="#dbeafe"/>
+  <text x="195" y="115" font-family="Arial" font-size="10" fill="#3b82f6" text-anchor="middle">Zone B</text>
+  <text x="195" y="135" font-family="Arial" font-size="14" fill="#1a1a1a" text-anchor="middle">8 plants</text>
+  <text x="195" y="155" font-family="Arial" font-size="8" fill="#6b7280" text-anchor="middle">Good</text>
+  <rect x="30" y="185" width="100" height="85" rx="8" fill="#fef3c7"/>
+  <text x="80" y="210" font-family="Arial" font-size="10" fill="#f59e0b" text-anchor="middle">Zone C</text>
+  <text x="80" y="230" font-family="Arial" font-size="14" fill="#1a1a1a" text-anchor="middle">15 plants</text>
+  <text x="80" y="250" font-family="Arial" font-size="8" fill="#6b7280" text-anchor="middle">Needs water</text>
+  <rect x="140" y="185" width="110" height="85" rx="8" fill="#fce7f3"/>
+  <text x="195" y="210" font-family="Arial" font-size="10" fill="#ec4899" text-anchor="middle">Zone D</text>
+  <text x="195" y="230" font-family="Arial" font-size="14" fill="#1a1a1a" text-anchor="middle">5 plants</text>
+  <text x="195" y="250" font-family="Arial" font-size="8" fill="#6b7280" text-anchor="middle">Flowering</text>
+  <text x="20" y="305" font-family="Arial" font-size="12" fill="#1a1a1a" font-weight="bold">Zone List</text>
+  <rect x="20" y="320" width="240" height="60" rx="12" fill="white"/>
+  <rect x="30" y="335" width="30" height="30" rx="6" fill="#4ade80"/>
+  <text x="45" y="355" font-family="Arial" font-size="12" fill="white" text-anchor="middle">A</text>
+  <text x="70" y="345" font-family="Arial" font-size="11" fill="#1a1a1a" font-weight="medium">Zone A - Front yard</text>
+  <text x="70" y="360" font-family="Arial" font-size="9" fill="#6b7280">12 plants - 2 tasks</text>
+  <rect x="240" y="350" width="10" height="10" rx="5" fill="#4ade80"/>
+  <rect x="20" y="390" width="240" height="60" rx="12" fill="white"/>
+  <rect x="30" y="405" width="30" height="30" rx="6" fill="#3b82f6"/>
+  <text x="45" y="425" font-family="Arial" font-size="12" fill="white" text-anchor="middle">B</text>
+  <text x="70" y="415" font-family="Arial" font-size="11" fill="#1a1a1a" font-weight="medium">Zone B - Balcony</text>
+  <text x="70" y="430" font-family="Arial" font-size="9" fill="#6b7280">8 plants - 0 tasks</text>
+  <rect x="240" y="420" width="10" height="10" rx="5" fill="#3b82f6"/>
+  <rect x="20" y="460" width="240" height="60" rx="12" fill="white"/>
+  <rect x="30" y="475" width="30" height="30" rx="6" fill="#f59e0b"/>
+  <text x="45" y="495" font-family="Arial" font-size="12" fill="white" text-anchor="middle">C</text>
+  <text x="70" y="485" font-family="Arial" font-size="11" fill="#1a1a1a" font-weight="medium">Zone C - Back yard</text>
+  <text x="70" y="500" font-family="Arial" font-size="9" fill="#6b7280">15 plants - 5 tasks</text>
+</svg>

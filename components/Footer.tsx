@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const quickLinks = [
@@ -28,15 +29,12 @@ export function Footer() {
               <p className="text-sm text-muted-foreground">Chăm cây thông minh hơn mỗi ngày.</p>
             </div>
             <div className="flex items-center gap-3">
-              <div className="rounded-2xl border border-emerald-900/10 bg-emerald-950 px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(20,83,45,0.2)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(20,83,45,0.25)]">
+              <div className="rounded-2xl border border-black/20 bg-[#1a1a1a] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(0,0,0,0.2),0_8px_24px_rgba(0,0,0,0.25)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(0,0,0,0.25),0_12px_32px_rgba(0,0,0,0.3)]">
                 <div className="flex items-center gap-2">
-                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
-                  </svg>
+                  <Image src="/google-play-icon.svg" alt="Google Play" width={20} height={20} className="h-5 w-5" />
                   Google Play
                 </div>
               </div>
-              <span className="text-xs text-muted-foreground">Sắp ra mắt trên App Store</span>
             </div>
           </div>
         </motion.div>
@@ -52,7 +50,7 @@ export function Footer() {
             className="space-y-5"
           >
             <div className="flex items-center gap-2.5">
-              <div className="h-9 w-9 rounded-xl bg-linear-to-br from-accent to-secondary shadow-[0_8px_20px_rgba(20,83,45,0.12)]" />
+              <Image src="/logo.png" alt="PlantCare Hub" width={40} height={40} className="rounded-full object-contain" />
               <span className="font-heading text-xl font-bold text-foreground">PlantCare Hub</span>
             </div>
             <p className="text-sm leading-relaxed text-muted-foreground">

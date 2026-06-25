@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
@@ -54,7 +55,7 @@ export function Navigation() {
       <div className="relative mx-auto w-full max-w-screen-2xl px-6 md:px-10 lg:px-14 xl:px-16">
         <div className="flex h-16 items-center justify-between">
           <a href="#" className="flex items-center gap-3 group">
-            <div className="h-7 w-7 rounded-full bg-linear-to-br from-sky-400 to-green-400 shadow-[0_10px_24px_rgba(20,184,166,0.18)] transition-transform duration-300 group-hover:scale-110" />
+            <Image src="/logo.png" alt="PlantCare Hub" width={36} height={36} className="rounded-full object-contain transition-transform duration-300 group-hover:scale-105" />
             <span className="font-heading text-lg font-bold text-foreground">PlantCare Hub</span>
           </a>
 
@@ -75,7 +76,7 @@ export function Navigation() {
               Xem demo
             </button>
 
-            <button className="inline-flex rounded-full bg-primary px-5 py-2 text-xs font-bold text-white shadow-[0_14px_36px_rgba(20,83,45,0.16)] transition duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:bg-primary/90 active:translate-y-0 active:scale-[0.98]">
+            <button className="inline-flex items-center gap-2 rounded-full bg-[#1a1a1a] px-6 py-2.5 text-xs font-bold text-white shadow-[0_0_25px_rgba(0,0,0,0.2),0_14px_36px_rgba(0,0,0,0.18)] transition duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:bg-black active:translate-y-0 active:scale-[0.98]">
               Tải ứng dụng
             </button>
           </div>

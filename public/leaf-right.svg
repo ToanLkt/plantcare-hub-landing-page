@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 120" fill="none">
+  <defs>
+    <linearGradient id="leafGrad1R" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3d8b40"/>
+      <stop offset="100%" stop-color="#2d6a30"/>
+    </linearGradient>
+    <linearGradient id="leafGrad2R" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4da650"/>
+      <stop offset="100%" stop-color="#3d8b40"/>
+    </linearGradient>
+  </defs>
+  <!-- Main heart-shaped leaf (pothos style) -->
+  <path d="M40 5C40 5 10 25 10 55C10 85 25 110 40 115C55 110 70 85 70 55C70 25 40 5 40 5Z" fill="url(#leafGrad1R)" opacity="0.6"/>
+  <!-- Leaf highlight -->
+  <path d="M40 10C40 10 15 28 15 55C15 82 28 105 40 108C40 108 40 10 40 10Z" fill="url(#leafGrad2R)" opacity="0.3"/>
+  <!-- Center vein -->
+  <path d="M40 15L40 105" stroke="#1a4a1a" stroke-width="1.5" opacity="0.4"/>
+  <!-- Side veins left -->
+  <path d="M40 30L22 42" stroke="#1a4a1a" stroke-width="0.8" opacity="0.3"/>
+  <path d="M40 45L20 58" stroke="#1a4a1a" stroke-width="0.8" opacity="0.3"/>
+  <path d="M40 60L22 75" stroke="#1a4a1a" stroke-width="0.8" opacity="0.3"/>
+  <path d="M40 75L25 88" stroke="#1a4a1a" stroke-width="0.8" opacity="0.3"/>
+  <!-- Side veins right -->
+  <path d="M40 30L58 42" stroke="#1a4a1a" stroke-width="0.8" opacity="0.3"/>
+  <path d="M40 45L60 58" stroke="#1a4a1a" stroke-width="0.8" opacity="0.3"/>
+  <path d="M40 60L58 75" stroke="#1a4a1a" stroke-width="0.8" opacity="0.3"/>
+  <path d="M40 75L55 88" stroke="#1a4a1a" stroke-width="0.8" opacity="0.3"/>
+</svg>

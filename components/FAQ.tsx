@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const faqs = [
   {
@@ -34,7 +35,7 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="w-full overflow-hidden bg-background px-6 py-20 md:px-10 md:py-28 lg:px-14 xl:px-16">
+    <section id="faq" className="relative w-full overflow-hidden bg-background px-6 py-20 md:px-10 md:py-28 lg:px-14 xl:px-16">
       <div className="mx-auto w-full max-w-screen-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 520">
+  <rect width="280" height="520" fill="#f8fbf7"/>
+  <rect width="280" height="60" fill="#ec4899"/>
+  <text x="20" y="35" font-family="Arial" font-size="14" fill="white" font-weight="bold">Dashboard</text>
+  <text x="20" y="50" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.7)">Weekly report</text>
+  <rect x="20" y="80" width="75" height="80" rx="12" fill="white"/>
+  <text x="57" y="110" font-family="Arial" font-size="24" fill="#4ade80" text-anchor="middle">50+</text>
+  <text x="57" y="130" font-family="Arial" font-size="8" fill="#6b7280" text-anchor="middle">Total plants</text>
+  <circle cx="57" cy="145" r="4" fill="#4ade80"/>
+  <rect x="102" y="80" width="75" height="80" rx="12" fill="white"/>
+  <text x="139" y="110" font-family="Arial" font-size="24" fill="#3b82f6" text-anchor="middle">12</text>
+  <text x="139" y="130" font-family="Arial" font-size="8" fill="#6b7280" text-anchor="middle">Completed</text>
+  <circle cx="139" cy="145" r="4" fill="#3b82f6"/>
+  <rect x="184" y="80" width="75" height="80" rx="12" fill="white"/>
+  <text x="221" y="110" font-family="Arial" font-size="24" fill="#f59e0b" text-anchor="middle">95%</text>
+  <text x="221" y="130" font-family="Arial" font-size="8" fill="#6b7280" text-anchor="middle">Healthy</text>
+  <circle cx="221" cy="145" r="4" fill="#f59e0b"/>
+  <rect x="20" y="175" width="240" height="150" rx="12" fill="white"/>
+  <text x="30" y="200" font-family="Arial" font-size="11" fill="#1a1a1a" font-weight="bold">Weekly Tasks</text>
+  <rect x="40" y="250" width="25" height="50" rx="4" fill="#dcfce7"/>
+  <text x="52" y="270" font-family="Arial" font-size="8" fill="#4ade80" text-anchor="middle">5</text>
+  <rect x="75" y="230" width="25" height="70" rx="4" fill="#bfdbfe"/>
+  <text x="87" y="250" font-family="Arial" font-size="8" fill="#3b82f6" text-anchor="middle">7</text>
+  <rect x="110" y="240" width="25" height="60" rx="4" fill="#fde68a"/>
+  <text x="122" y="260" font-family="Arial" font-size="8" fill="#f59e0b" text-anchor="middle">6</text>
+  <rect x="145" y="220" width="25" height="80" rx="4" fill="#fecdd3"/>
+  <text x="157" y="240" font-family="Arial" font-size="8" fill="#f43f5e" text-anchor="middle">8</text>
+  <rect x="180" y="235" width="25" height="65" rx="4" fill="#ddd6fe"/>
+  <text x="192" y="255" font-family="Arial" font-size="8" fill="#8b5cf6" text-anchor="middle">6</text>
+  <rect x="215" y="255" width="25" height="45" rx="4" fill="#a7f3d0"/>
+  <text x="227" y="275" font-family="Arial" font-size="8" fill="#10b981" text-anchor="middle">4</text>
+  <text x="52" y="315" font-family="Arial" font-size="7" fill="#9ca3af" text-anchor="middle">M</text>
+  <text x="87" y="315" font-family="Arial" font-size="7" fill="#9ca3af" text-anchor="middle">T</text>
+  <text x="122" y="315" font-family="Arial" font-size="7" fill="#9ca3af" text-anchor="middle">W</text>
+  <text x="157" y="315" font-family="Arial" font-size="7" fill="#9ca3af" text-anchor="middle">T</text>
+  <text x="192" y="315" font-family="Arial" font-size="7" fill="#9ca3af" text-anchor="middle">F</text>
+  <text x="227" y="315" font-family="Arial" font-size="7" fill="#9ca3af" text-anchor="middle">S</text>
+  <text x="20" y="345" font-family="Arial" font-size="11" fill="#1a1a1a" font-weight="bold">Today Tasks</text>
+  <rect x="20" y="360" width="240" height="50" rx="12" fill="white"/>
+  <rect x="30" y="375" width="20" height="20" rx="10" fill="#dcfce7"/>
+  <text x="40" y="390" font-family="Arial" font-size="10" fill="#4ade80" text-anchor="middle">?</text>
+  <text x="60" y="378" font-family="Arial" font-size="10" fill="#1a1a1a">Water Zone A</text>
+  <text x="60" y="392" font-family="Arial" font-size="8" fill="#6b7280">Completed</text>
+  <rect x="20" y="420" width="240" height="50" rx="12" fill="white"/>
+  <rect x="30" y="435" width="20" height="20" rx="10" fill="#fef3c7"/>
+  <text x="40" y="450" font-family="Arial" font-size="12" fill="#f59e0b" text-anchor="middle">!</text>
+  <text x="60" y="438" font-family="Arial" font-size="10" fill="#1a1a1a">Fertilize Zone C</text>
+  <text x="60" y="452" font-family="Arial" font-size="8" fill="#f59e0b">Due soon</text>
+  <rect x="20" y="480" width="240" height="50" rx="12" fill="white"/>
+  <rect x="30" y="495" width="20" height="20" rx="10" fill="#e5e7eb"/>
+  <text x="40" y="510" font-family="Arial" font-size="10" fill="#9ca3af" text-anchor="middle">?</text>
+  <text x="60" y="498" font-family="Arial" font-size="10" fill="#1a1a1a">Check for pests</text>
+  <text x="60" y="512" font-family="Arial" font-size="8" fill="#6b7280">9:00 AM</text>
+</svg>

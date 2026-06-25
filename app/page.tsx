@@ -3,7 +3,7 @@ import { Hero } from '@/components/Hero';
 import { Marquee } from '@/components/Marquee';
 import { DemoArea } from '@/components/DemoArea';
 import { MainStatement } from '@/components/MainStatement';
-import { HowItWorks } from '@/components/HowItWorks';
+import { FeatureGrid } from '@/components/FeatureGrid';
 import { PlantTips } from '@/components/PlantTips';
 import { Footer } from '@/components/Footer';
 
@@ -20,7 +20,7 @@ export default function Page() {
       <Marquee />
       <DemoArea />
       <MainStatement />
-      <HowItWorks />
+      <FeatureGrid />
       <PlantTips />
       <Footer />
     </main>

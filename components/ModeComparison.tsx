@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export function ModeComparison() {
   const [mode, setMode] = useState<'basic' | 'pro'>('basic');
@@ -20,7 +21,7 @@ export function ModeComparison() {
   };
 
   return (
-    <section id="pricing" className="bg-background px-4 py-20 sm:px-6 lg:px-8">
+    <section id="pricing" className="relative bg-background px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

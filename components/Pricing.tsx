@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const pricingPlans = [
   {
@@ -33,7 +34,7 @@ const pricingPlans = [
 
 export function Pricing() {
   return (
-    <section className="w-full overflow-hidden bg-background px-6 py-20 md:px-10 md:py-28 lg:px-14 xl:px-16">
+    <section className="relative w-full overflow-hidden bg-background px-6 py-20 md:px-10 md:py-28 lg:px-14 xl:px-16">
       <div className="mx-auto w-full max-w-[1400px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

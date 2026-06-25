@@ -145,9 +145,35 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
-  html {
-    @apply bg-background;
-  }
+html {
+  @apply bg-background;
+}
+
+/* Background plant decoration */
+body {
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  bottom: -50px;
+  right: -50px;
+  width: 600px;
+  height: 600px;
+  background-image: url('/images/pothos-background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
   h1,
   h2,
   h3,

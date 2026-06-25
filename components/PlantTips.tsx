@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const plants = [
   { name: 'Trầu bà', hasTips: true, tips: ['Sáng gián tiếp', 'Tưới 1-2 lần/tuần', 'Tránh úng rễ vào mùa mưa'] },
