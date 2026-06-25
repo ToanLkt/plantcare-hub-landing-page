@@ -61,7 +61,7 @@ function VerticalMarqueeTrack() {
         {duplicatedSteps.map((step, idx) => (
           <div
             key={idx}
-            className="flex-shrink-0 h-40 lg:h-48 flex items-center justify-between gap-8 px-6 lg:px-8 py-8 lg:py-10 border-t border-emerald-900/10 hover:bg-white/50 transition-colors"
+            className="relative flex-shrink-0 h-40 lg:h-48 items-center justify-between gap-8 px-6 lg:px-8 py-8 lg:py-10 border-t border-emerald-900/10 transition-colors hover:bg-white/50"
           >
             <div className="flex min-w-0 flex-1 items-start gap-5">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-sm font-bold text-emerald-950 shadow-[0_10px_30px_rgba(20,83,45,0.08)] ring-1 ring-emerald-900/10">
@@ -81,7 +81,6 @@ function VerticalMarqueeTrack() {
         ))}
       </div>
 
-      {/* Gradient overlays for fade effect */}
       <div className="absolute top-0 left-0 right-0 h-12 lg:h-16 bg-linear-to-b from-background to-transparent pointer-events-none z-10" />
       <div className="absolute bottom-0 left-0 right-0 h-12 lg:h-16 bg-linear-to-t from-background to-transparent pointer-events-none z-10" />
     </div>
@@ -109,17 +108,23 @@ export function HowItWorks() {
             </p>
 
             <div className="mt-8 grid gap-4">
-              <div className="rounded-[30px] border border-emerald-900/10 bg-white/75 p-6 shadow-[0_18px_60px_rgba(20,83,45,0.08)]">
-                <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-950/70">Personal Mode</span>
-                <p className="mt-4 text-sm leading-relaxed text-foreground/60">
-                  Dành cho người chăm cây tại nhà, muốn theo dõi từng chậu cây và nhận nhắc lịch riêng.
-                </p>
+              <div className="relative overflow-hidden rounded-[30px] border border-emerald-900/10 bg-white/75 p-6 shadow-[0_18px_60px_rgba(20,83,45,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(20,83,45,0.12)]">
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-emerald-50/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="relative">
+                  <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-950/70">Personal Mode</span>
+                  <p className="mt-4 text-sm leading-relaxed text-foreground/60">
+                    Dành cho người chăm cây tại nhà, muốn theo dõi từng chậu cây và nhận nhắc lịch riêng.
+                  </p>
+                </div>
               </div>
-              <div className="rounded-[30px] border border-emerald-900/10 bg-[#eef8ee] p-6 shadow-[0_18px_60px_rgba(20,83,45,0.08)]">
-                <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-emerald-950/70">Garden Mode</span>
-                <p className="mt-4 text-sm leading-relaxed text-foreground/60">
-                  Dành cho vườn ươm hoặc người trồng nhiều cây, cần quản lý theo khu vực và vật tư.
-                </p>
+              <div className="relative overflow-hidden rounded-[30px] border border-emerald-900/10 bg-[#eef8ee] p-6 shadow-[0_18px_60px_rgba(20,83,45,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(20,83,45,0.12)]">
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-emerald-50/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="relative">
+                  <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-emerald-950/70">Garden Mode</span>
+                  <p className="mt-4 text-sm leading-relaxed text-foreground/60">
+                    Dành cho vườn ươm hoặc người trồng nhiều cây, cần quản lý theo khu vực và vật tư.
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -154,13 +159,16 @@ export function HowItWorks() {
 
           <div className="grid gap-4">
             {modeFeatures.map((step) => (
-              <div key={`${step.mode}-${step.title}`} className="rounded-3xl border border-emerald-900/10 bg-white/80 p-5 shadow-[0_14px_45px_rgba(20,83,45,0.07)]">
-                <div className="mb-3 flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-950 text-xs font-bold text-white">{step.number}</span>
-                  <span className="rounded-full bg-emerald-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-emerald-950/60">{step.mode}</span>
+              <div key={`${step.mode}-${step.title}`} className="relative overflow-hidden rounded-3xl border border-emerald-900/10 bg-white/80 p-5 shadow-[0_14px_45px_rgba(20,83,45,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_55px_rgba(20,83,45,0.1)]">
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-emerald-50/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="relative">
+                  <div className="mb-3 flex items-center gap-3">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-950 text-xs font-bold text-white">{step.number}</span>
+                    <span className="rounded-full bg-emerald-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-emerald-950/60">{step.mode}</span>
+                  </div>
+                  <h3 className="font-heading text-xl font-bold text-foreground">{step.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-foreground/60">{step.description}</p>
                 </div>
-                <h3 className="font-heading text-xl font-bold text-foreground">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-foreground/60">{step.description}</p>
               </div>
             ))}
           </div>

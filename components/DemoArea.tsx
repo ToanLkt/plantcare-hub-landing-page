@@ -33,7 +33,7 @@ export function DemoArea() {
                 Bạn đã từng gặp tình huống này?
               </h2>
               <p className="max-w-xl text-base leading-relaxed text-foreground/65">
-                PlantCare Hub giúp giải quyết tất cả những vấn đề đó bằng một quy trình chăm cây rõ ràng, dễ dùng và có AI hỗ trợ.
+                PlantCare Hub kết hợp AI vào từng bước chăm cây, giúp bạn yên tâm hơn mà không cần am hiểu chuyên sâu.
               </p>
             </div>
 
@@ -45,9 +45,10 @@ export function DemoArea() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.06 }}
-                  className="rounded-2xl border border-emerald-900/10 bg-white/70 p-4 text-sm font-medium leading-relaxed text-foreground/75 shadow-[0_12px_40px_rgba(20,83,45,0.06)] transition duration-300 hover:-translate-y-1 hover:bg-white"
+                  className="group relative overflow-hidden rounded-2xl border border-emerald-900/10 bg-white/70 p-4 text-sm font-medium leading-relaxed text-foreground/75 shadow-[0_12px_40px_rgba(20,83,45,0.06)] transition duration-300 hover:-translate-y-1 hover:bg-white"
                 >
-                  {item}
+                  <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-emerald-50/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <span className="relative">{item}</span>
                 </motion.div>
               ))}
             </div>
@@ -61,16 +62,16 @@ export function DemoArea() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.08 }}
-                className="group rounded-[28px] border border-emerald-900/10 bg-white/80 p-6 shadow-[0_18px_55px_rgba(20,83,45,0.08)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(20,83,45,0.12)]"
+                className="group relative overflow-hidden rounded-[28px] border border-emerald-900/10 bg-white/80 p-6 shadow-[0_18px_55px_rgba(20,83,45,0.08)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(20,83,45,0.12)]"
               >
-                <div className="mb-5 flex items-center justify-between">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-950 text-sm font-bold text-white shadow-[0_12px_32px_rgba(20,83,45,0.16)]">
-                    {item.number}
-                  </div>
-                  <span className="font-heading text-4xl font-extrabold text-emerald-950/10">{item.number}</span>
+                <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-emerald-100/40 blur-2xl transition-transform duration-500 group-hover:scale-125" />
+                <div className="relative">
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-950 text-sm font-bold text-white shadow-[0_12px_32px_rgba(20,83,45,0.16)]">
+                      {item.number}
+                    </div>
+                  <h3 className="font-heading mb-2 text-xl font-bold text-foreground">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-foreground/60">{item.description}</p>
                 </div>
-                <h3 className="font-heading mb-2 text-xl font-bold text-foreground">{item.title}</h3>
-                <p className="text-sm leading-relaxed text-foreground/60">{item.description}</p>
               </motion.div>
             ))}
           </div>
