@@ -149,14 +149,14 @@ export async function loginWithEmail(email: string, password: string) {
   return session;
 }
 
-export async function deleteCurrentAccount(session: LandingSession, email: string, password: string) {
-  const response = await fetch(`${apiBaseUrl}/api/users/me/delete`, {
+export async function deleteCurrentAccount(session: LandingSession, email: string, password: string, confirmDeletion = true) {
+  const response = await fetch(`${apiBaseUrl}/api/auth/me/delete`, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${session.accessToken}`,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ email, password, confirmDelete: true }),
+    body: JSON.stringify({ email, password, confirmDeletion }),
   });
   const payload = await parseApiResponse<unknown>(response);
   if (!response.ok) {

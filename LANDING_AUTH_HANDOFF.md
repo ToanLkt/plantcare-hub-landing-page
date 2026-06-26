@@ -258,7 +258,7 @@ Authorization: Bearer <accessToken>
 
 This is a new landing-page-only feature. It is not implemented in current mobile app source and was not inspected there.
 
-- Endpoint: `POST /api/users/me/delete`
+- Endpoint: `POST /api/auth/me/delete`
 - Required header:
 
 ```http
@@ -271,7 +271,7 @@ Authorization: Bearer <accessToken>
 {
   "email": "user@example.com",
   "password": "current-password",
-  "confirmDelete": true
+  "confirmDeletion": true
 }
 ```
 
@@ -293,7 +293,7 @@ Authorization: Bearer <accessToken>
     - `email`
     - `current password`
     - confirmation checkbox
-  - submit to `POST /api/users/me/delete` with bearer token
+  - submit to `POST /api/auth/me/delete` with bearer token
   - on success:
     - clear local session
     - show success message

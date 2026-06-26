@@ -9,6 +9,7 @@ import { useLandingSession } from '@/lib/use-landing-session';
 type PendingDelete = {
   email: string;
   password: string;
+  confirmDeletion: true;
 };
 
 export function AccountDeletionForm() {
@@ -22,7 +23,7 @@ export function AccountDeletionForm() {
   const [loading, setLoading] = useState(false);
   const [pendingDelete, setPendingDelete] = useState<PendingDelete | null>(null);
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleOpenConfirmModal = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const email = String(formData.get('email') || '').trim();
@@ -46,17 +47,17 @@ export function AccountDeletionForm() {
       return;
     }
 
-    setPendingDelete({ email, password });
+    setPendingDelete({ email, password, confirmDeletion: true });
   };
 
-  const confirmDelete = async () => {
+  const handleConfirmDelete = async () => {
     if (!session || !pendingDelete) return;
     setMessage('');
     setModalMessage('');
 
     try {
       setLoading(true);
-      await deleteCurrentAccount(session, pendingDelete.email, pendingDelete.password);
+      await deleteCurrentAccount(session, pendingDelete.email, pendingDelete.password, pendingDelete.confirmDeletion);
       setPendingDelete(null);
       setPassword('');
       clearSession();
@@ -155,7 +156,7 @@ export function AccountDeletionForm() {
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form onSubmit={handleOpenConfirmModal} className="space-y-5">
                   <div>
                     <h2 className="font-heading text-xl font-bold text-foreground">Xác nhận thông tin</h2>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -253,7 +254,7 @@ export function AccountDeletionForm() {
               </button>
               <button
                 type="button"
-                onClick={confirmDelete}
+                onClick={handleConfirmDelete}
                 disabled={loading}
                 className="inline-flex min-h-11 items-center justify-center rounded-full border border-red-700 bg-red-700 px-6 py-3 text-sm font-bold text-white shadow-[0_14px_32px_rgba(185,28,28,0.22)] transition hover:-translate-y-0.5 hover:bg-red-800 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
               >
