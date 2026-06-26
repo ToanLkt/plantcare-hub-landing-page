@@ -1,4 +1,5 @@
 ﻿import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 import { DownloadToast } from '@/components/DownloadToast'
@@ -17,7 +18,6 @@ const beVietnamPro = localFont({
   ],
 })
 
-const shouldEnableAnalytics = process.env.VERCEL === '1'
 
 export const metadata: Metadata = {
   title: 'PlantCare Hub - Chăm cây thông minh bằng AI',
@@ -59,10 +59,12 @@ export default function RootLayout({
     <html lang="vi" className={`${beVietnamPro.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
+        <Analytics />
+        <SpeedInsights />
         <DownloadToast />
-        {shouldEnableAnalytics && <Analytics />}
       </body>
     </html>
   )
 }
+
 
