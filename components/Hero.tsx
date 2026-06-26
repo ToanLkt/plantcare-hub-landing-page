@@ -66,28 +66,9 @@ export function Hero() {
           </div>
 
           {/* Feature highlights */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.15 }}
-            className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-emerald-900/10 pt-8"
-          >
-            {[
-              'Chẩn đoán bệnh bằng AI',
-              'Nhắc lịch tưới & bón phân',
-              'Theo dõi sức khỏe cây',
-              'Quản lý vườn ươm',
-            ].map((item, idx) => (
-              <span key={item} className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
-                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
-                  <svg className="h-2.5 w-2.5" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M2.5 6l2.5 2.5 5-5" />
-                  </svg>
-                </span>
-                {item}
-              </span>
-            ))}
-          </motion.div>
+          <p className="border-t border-emerald-900/10 pt-6 text-xs text-muted-foreground/70">
+            Hiện đang trong giai đoạn thử nghiệm - phiên bản chính thức sẽ ra mắt sớm.
+          </p>
         </motion.div>
       </div>
     </section>

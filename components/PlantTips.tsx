@@ -51,10 +51,10 @@ export function PlantTips() {
                   key={plant.name}
                   type="button"
                   onClick={() => setSelectedPlant(plant)}
-                  className={`rounded-2xl border px-5 py-3.5 text-left text-sm font-semibold transition-all duration-300 ${
+                  className={`relative rounded-2xl border py-3.5 text-left text-sm font-semibold transition-all duration-300 ${
                     isActive
-                      ? 'border-emerald-900/15 bg-emerald-950 text-white shadow-[0_8px_24px_rgba(20,83,45,0.16)]'
-                      : 'border-emerald-900/10 bg-white/80 text-foreground hover:-translate-y-0.5 hover:bg-[#f8fbf7] hover:shadow-[0_8px_20px_rgba(20,83,45,0.08)]'
+                      ? 'border-emerald-500/20 bg-emerald-50/40 pl-9 pr-5 text-emerald-600 shadow-[0_8px_24px_rgba(20,83,45,0.08)]'
+                      : 'px-5 bg-white/80 text-foreground hover:-translate-y-0.5 hover:bg-[#f8fbf7] hover:shadow-[0_8px_20px_rgba(20,83,45,0.08)] border-emerald-900/10'
                   }`}
                 >
                   {plant.name}

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import DiaryScreen from './DiaryScreen';
 
 const personalFeatures = [
   {
@@ -101,9 +102,9 @@ const featureScreens = {
     gradient: 'from-emerald-400/10 to-teal-600/10',
     content: (
       <div className="h-full w-full overflow-hidden relative">
-        <img 
-          src="/images/diagnosis-screen.svg" 
-          alt="Chẩn đoán bệnh bằng AI" 
+        <img
+          src="/images/diagnosis-screen.png"
+          alt="Chẩn đoán bệnh bằng AI"
           className="w-full h-full object-cover object-top"
         />
       </div>
@@ -122,23 +123,15 @@ const featureScreens = {
     ),
   },
   diary: {
-    gradient: 'from-amber-400/10 to-orange-500/10',
-    content: (
-      <div className="h-full w-full overflow-hidden relative">
-        <img 
-          src="/images/diary-screen.svg" 
-          alt="Nhật ký phát triển" 
-          className="w-full h-full object-cover object-top"
-        />
-      </div>
-    ),
+    gradient: 'from-emerald-500/10 to-teal-600/10',
+    content: <DiaryScreen />,
   },
   library: {
     gradient: 'from-green-400/10 to-emerald-500/10',
     content: (
       <div className="h-full w-full overflow-hidden relative">
         <img 
-          src="/images/library-screen.svg" 
+          src="/images/library-screen.png" 
           alt="Thư viện cây cá nhân" 
           className="w-full h-full object-cover object-top"
         />
@@ -396,7 +389,7 @@ export function FeatureGrid() {
                           exit={{ opacity: 0 }}
                           transition={{ duration: 0.2 }}
                         >
-                          <div className="h-[520px] overflow-hidden pt-4">
+                          <div className="h-[520px] overflow-hidden">
                             {activeScreen.content}
                           </div>
                         </motion.div>
