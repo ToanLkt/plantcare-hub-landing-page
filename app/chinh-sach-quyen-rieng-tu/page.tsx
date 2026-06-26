@@ -19,8 +19,9 @@ export default function PrivacyPolicyPage() {
             <section className="space-y-4">
               <p>
                 PlantCare Hub (&quot;chúng tôi&quot;, &quot;ứng dụng&quot;) tôn trọng quyền riêng tư của người dùng. Chính sách này mô tả cách chúng tôi thu thập, sử dụng, chia sẻ và bảo vệ thông tin của bạn khi sử dụng ứng dụng. Nếu bạn không đồng ý với nội dung dưới đây, vui lòng không sử dụng ứng dụng. Mọi thắc mắc xin liên hệ:{' '}
-                <a href="mailto:luongkhangtoan3@gmail.com" className="font-semibold text-foreground underline underline-offset-4">
-                  luongkhangtoan3@gmail.com
+                <a href="mailto:plancarehub@gmail.com
+" className="font-semibold text-foreground underline underline-offset-4">
+                  plancarehub@gmail.com
                 </a>
                 .
               </p>
@@ -117,8 +118,8 @@ export default function PrivacyPolicyPage() {
               </ul>
               <p>
                 Để thực hiện các quyền trên, vui lòng liên hệ:{' '}
-                <a href="mailto:luongkhangtoan3@gmail.com" className="font-semibold text-foreground underline underline-offset-4">
-                  luongkhangtoan3@gmail.com
+                <a href="mailto:plancarehub@gmail.com" className="font-semibold text-foreground underline underline-offset-4">
+                  plancarehub@gmail.com
                 </a>
                 . Chúng tôi sẽ phản hồi trong thời gian hợp lý.
               </p>
@@ -142,8 +143,8 @@ export default function PrivacyPolicyPage() {
               <h2 className="font-heading text-lg font-semibold text-foreground">9. Liên hệ</h2>
               <p>
                 Mọi câu hỏi, góp ý hoặc yêu cầu liên quan đến chính sách này, vui lòng liên hệ:{' '}
-                <a href="mailto:luongkhangtoan3@gmail.com" className="font-semibold text-foreground underline underline-offset-4">
-                  luongkhangtoan3@gmail.com
+                <a href="mailto:plancarehub@gmail.com" className="font-semibold text-foreground underline underline-offset-4">
+                  plancarehub@gmail.com
                 </a>
                 .
               </p>

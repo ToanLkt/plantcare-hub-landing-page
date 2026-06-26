@@ -1,6 +1,7 @@
 ﻿import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
+import { DownloadToast } from '@/components/DownloadToast'
 import './globals.css'
 
 const beVietnamPro = localFont({
@@ -58,8 +59,10 @@ export default function RootLayout({
     <html lang="vi" className={`${beVietnamPro.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
+        <DownloadToast />
         {shouldEnableAnalytics && <Analytics />}
       </body>
     </html>
   )
 }
+

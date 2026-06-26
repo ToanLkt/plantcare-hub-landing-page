@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import Image from 'next/image';
+import { showDownloadToast } from '@/lib/download-toast';
 
 const plants = [
   { name: 'Trầu bà', hasTips: true, tips: ['Sáng gián tiếp', 'Tưới 1-2 lần/tuần', 'Tránh úng rễ vào mùa mưa'] },
@@ -21,6 +21,7 @@ const featuredPlants = plants.filter(p => p.hasTips).slice(0, 3);
 export function PlantTips() {
   const [selectedPlant, setSelectedPlant] = useState(featuredPlants[0]);
   const [showAllModal, setShowAllModal] = useState(false);
+  const selectedTips = selectedPlant.tips || [];
 
   return (
     <section id="tips" className="relative w-full overflow-hidden bg-background px-6 py-24 md:px-10 md:py-28 lg:px-14 xl:px-16">
@@ -101,7 +102,7 @@ export function PlantTips() {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                {selectedPlant.tips.map((tip, i) => (
+                {selectedTips.map((tip, i) => (
                   <span
                     key={i}
                     className="inline-flex items-center rounded-full border border-emerald-900/10 bg-[#f8fbf7] px-5 py-2.5 text-sm font-medium text-foreground/80"
@@ -112,12 +113,13 @@ export function PlantTips() {
               </div>
 
               <div className="mt-10">
-                <a
-                  href="#"
+                <button
+                  type="button"
+                  onClick={showDownloadToast}
                   className="inline-flex rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90 active:scale-[0.98]"
                 >
                   Muốn được nhắc lịch tự động? Tải PlantCare Hub
-                </a>
+                </button>
               </div>
             </motion.div>
           </AnimatePresence>

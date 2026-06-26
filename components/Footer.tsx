@@ -1,7 +1,9 @@
 ﻿'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { showDownloadToast } from '@/lib/download-toast';
 
 const quickLinks = [
   { label: 'Vấn đề', href: '#problems' },
@@ -29,12 +31,16 @@ export function Footer() {
               <p className="text-sm text-muted-foreground">Chăm cây thông minh hơn mỗi ngày.</p>
             </div>
             <div className="flex items-center gap-3">
-              <div className="rounded-2xl border border-black/20 bg-[#1a1a1a] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(0,0,0,0.2),0_8px_24px_rgba(0,0,0,0.25)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(0,0,0,0.25),0_12px_32px_rgba(0,0,0,0.3)]">
+              <button
+                type="button"
+                onClick={showDownloadToast}
+                className="rounded-2xl border border-black/20 bg-[#1a1a1a] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(0,0,0,0.2),0_8px_24px_rgba(0,0,0,0.25)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(0,0,0,0.25),0_12px_32px_rgba(0,0,0,0.3)] active:scale-[0.98]"
+              >
                 <div className="flex items-center gap-2">
                   <Image src="/google-play-icon.svg" alt="Google Play" width={20} height={20} className="h-5 w-5" />
                   Google Play
                 </div>
-              </div>
+              </button>
             </div>
           </div>
         </motion.div>
@@ -69,7 +75,8 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="mailto:support@plantcarehub.vn"
+                href="mailto:plancarehub@gmail.com
+"
                 className="flex h-9 w-9 items-center justify-center rounded-xl border border-emerald-900/10 bg-white/80 text-muted-foreground shadow-[0_4px_12px_rgba(20,83,45,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-900/20 hover:text-foreground hover:shadow-[0_8px_20px_rgba(20,83,45,0.1)]"
                 aria-label="Email"
               >
@@ -91,18 +98,20 @@ export function Footer() {
           >
             <h4 className="font-heading text-sm font-bold tracking-[0.02em] text-foreground">Liên hệ & Hỗ trợ</h4>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Có câu hỏi hoặc muốn hợp tác? Liên hệ chúng tôi qua:
+              Có câu hỏi hoặc muốn hợp tác? <br />
+               Liên hệ chúng tôi qua:
             </p>
             <div className="space-y-2">
               <a
-                href="mailto:support@plantcarehub.vn"
+                href="mailto:plancarehub@gmail.com
+"
                 className="flex items-center gap-2 text-sm text-muted-foreground transition hover:text-foreground"
               >
                 <svg className="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="2" y="4" width="20" height="16" rx="2" />
                   <path d="m22 7-10 6L2 7" />
                 </svg>
-                support@plantcarehub.vn
+                plancarehub@gmail.com
               </a>
               <a
                 href="https://www.facebook.com/share/1bS4WtWhRb/?mibextid=wwXIfr"
@@ -131,18 +140,18 @@ export function Footer() {
               Chúng tôi tôn trọng quyền riêng tư và cam kết bảo vệ dữ liệu của bạn.
             </p>
             <div className="flex flex-wrap gap-2 pt-1">
-              <a
+              <Link
                 href="/chinh-sach-quyen-rieng-tu"
                 className="rounded-full border border-emerald-900/10 bg-white/80 px-4 py-1.5 text-xs font-semibold text-foreground shadow-[0_4px_12px_rgba(20,83,45,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-900/20 hover:shadow-[0_8px_20px_rgba(20,83,45,0.1)]"
               >
                 Chính sách Quyền riêng tư
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/dieu-khoan-su-dung"
                 className="rounded-full border border-emerald-900/10 bg-white/80 px-4 py-1.5 text-xs font-semibold text-foreground shadow-[0_4px_12px_rgba(20,83,45,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-900/20 hover:shadow-[0_8px_20px_rgba(20,83,45,0.1)]"
               >
                 Điều khoản Sử dụng
-              </a>
+              </Link>
             </div>
           </motion.div>
 

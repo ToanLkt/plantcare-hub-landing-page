@@ -2,10 +2,22 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useLandingSession } from '@/lib/use-landing-session';
+import { showDownloadToast } from '@/lib/download-toast';
 
 export function Hero() {
+  const router = useRouter();
+  const { session, ready } = useLandingSession();
+  const isAuthenticated = ready && Boolean(session?.user && session.accessToken);
+
+  const handleDeleteClick = () => {
+    router.push('/xoa-tai-khoan');
+  };
+
   return (
-    <section className="relative isolate min-h-[calc(100vh-80px)] w-full overflow-hidden bg-[#f8fbf7]">
+    <>
+      <section className="relative isolate min-h-[calc(100vh-80px)] w-full overflow-hidden bg-[#f8fbf7]">
       <div className="absolute inset-0 z-0 h-full w-full overflow-hidden bg-[#f8fbf7]">
         <Image
           src="/Background.webp"
@@ -55,14 +67,23 @@ export function Hero() {
           </div>
 
           <div className="flex flex-col gap-4 pt-1 sm:flex-row sm:items-center">
-            <button className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#1a1a1a] px-8 py-3 text-sm font-bold text-white shadow-[0_0_40px_rgba(0,0,0,0.25),0_18px_45px_rgba(0,0,0,0.3)] transition duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:bg-black active:scale-[0.98]">
+            <button
+              type="button"
+              onClick={showDownloadToast}
+              className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#1a1a1a] px-8 py-3 text-sm font-bold text-white shadow-[0_0_40px_rgba(0,0,0,0.25),0_18px_45px_rgba(0,0,0,0.3)] transition duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:bg-black active:scale-[0.98]"
+            >
               <Image src="/google-play-icon.svg" alt="Google Play" width={24} height={24} className="h-6 w-6" />
               Tải xuống trên Google Play
             </button>
-
-            <button className="inline-flex min-h-10 items-center justify-center rounded-full border border-emerald-900/10 bg-white/55 px-8 py-3 text-sm font-semibold text-foreground backdrop-blur-md transition duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:bg-white/80 active:translate-y-0 active:scale-[0.98]">
-              Xem demo ứng dụng
-            </button>
+            {isAuthenticated ? (
+              <button
+                type="button"
+                onClick={handleDeleteClick}
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-emerald-900/12 bg-white/45 px-8 py-3 text-sm font-bold text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] backdrop-blur-lg transition duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:bg-white/65 active:scale-[0.98]"
+              >
+                Xóa tài khoản
+              </button>
+            ) : null}
           </div>
 
           {/* Feature highlights */}
@@ -71,6 +92,7 @@ export function Hero() {
           </p>
         </motion.div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }
